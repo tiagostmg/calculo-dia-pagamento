@@ -7,7 +7,7 @@ namespace src
         public List<Cliente> ClientesAPagar(Cliente[] clientes)
         {
             int dia = DiaDeVencimentoAPagar().Day;
-            List<Cliente> lista = [];
+            List<Cliente> lista = new List<Cliente>();
             foreach (Cliente c in clientes)
             {
                 if (c.DiaPagamento == dia)
@@ -23,12 +23,23 @@ namespace src
             foreach (int dia in dias)
             {
                 int mes = DateTime.Now.Month;
+                int ano = DateTime.Now.Year;
                 int diaAtual = DateTime.Now.Day;
                 if (dia > diaAtual)
                 {
                     mes -= 1;
+                    if (mes == 0)
+                    {
+                        mes = 12;
+                        ano -= 1;
+                    }
                 }
-                DateTime diaVencimento = new(DateTime.Now.Year, mes, Math.Min(dia, DateTime.DaysInMonth(DateTime.Now.Year, mes)));
+                if (dia > DateTime.DaysInMonth(ano, mes))
+                {
+                    continue;
+                }
+
+                DateTime diaVencimento = new(ano, mes, Math.Min(dia, DateTime.DaysInMonth(ano, mes)));
                 if (SomarDiasUteis(diaVencimento, 3).Date == DateTime.Now.Date)
                 {
                     return diaVencimento.Date;
@@ -51,8 +62,7 @@ namespace src
         }
         public bool IsDiaUtil(DateTime dia)
         {
-            int[] diasFeriados = [1, 12, 25]; // Exemplo de feriados
-
+            int[] diasFeriados = new Feriados().GetFeriados();
             return dia.DayOfWeek != DayOfWeek.Sunday &&
                    dia.DayOfWeek != DayOfWeek.Saturday &&
                    !diasFeriados.Contains(dia.Day);

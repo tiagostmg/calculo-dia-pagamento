@@ -12,3 +12,4 @@ C:\Users\Tiago\dev\dotnet\TesteFuncoes\obj\Debug\net9.0\refint\TesteFuncoes.dll
 C:\Users\Tiago\dev\dotnet\TesteFuncoes\obj\Debug\net9.0\TesteFuncoes.pdb
 C:\Users\Tiago\dev\dotnet\TesteFuncoes\obj\Debug\net9.0\TesteFuncoes.genruntimeconfig.cache
 C:\Users\Tiago\dev\dotnet\TesteFuncoes\obj\Debug\net9.0\ref\TesteFuncoes.dll
+C:\Users\Tiago\dev\dotnet\TesteFuncoes\obj\Debug\net9.0\TesteFuncoes.sourcelink.json
