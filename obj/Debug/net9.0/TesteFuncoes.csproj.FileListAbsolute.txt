@@ -1,0 +1,14 @@
+C:\Users\Tiago\dev\dotnet\TesteFuncoes\bin\Debug\net9.0\TesteFuncoes.exe
+C:\Users\Tiago\dev\dotnet\TesteFuncoes\bin\Debug\net9.0\TesteFuncoes.deps.json
+C:\Users\Tiago\dev\dotnet\TesteFuncoes\bin\Debug\net9.0\TesteFuncoes.runtimeconfig.json
+C:\Users\Tiago\dev\dotnet\TesteFuncoes\bin\Debug\net9.0\TesteFuncoes.dll
+C:\Users\Tiago\dev\dotnet\TesteFuncoes\bin\Debug\net9.0\TesteFuncoes.pdb
+C:\Users\Tiago\dev\dotnet\TesteFuncoes\obj\Debug\net9.0\TesteFuncoes.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tiago\dev\dotnet\TesteFuncoes\obj\Debug\net9.0\TesteFuncoes.AssemblyInfoInputs.cache
+C:\Users\Tiago\dev\dotnet\TesteFuncoes\obj\Debug\net9.0\TesteFuncoes.AssemblyInfo.cs
+C:\Users\Tiago\dev\dotnet\TesteFuncoes\obj\Debug\net9.0\TesteFuncoes.csproj.CoreCompileInputs.cache
+C:\Users\Tiago\dev\dotnet\TesteFuncoes\obj\Debug\net9.0\TesteFuncoes.dll
+C:\Users\Tiago\dev\dotnet\TesteFuncoes\obj\Debug\net9.0\refint\TesteFuncoes.dll
+C:\Users\Tiago\dev\dotnet\TesteFuncoes\obj\Debug\net9.0\TesteFuncoes.pdb
+C:\Users\Tiago\dev\dotnet\TesteFuncoes\obj\Debug\net9.0\TesteFuncoes.genruntimeconfig.cache
+C:\Users\Tiago\dev\dotnet\TesteFuncoes\obj\Debug\net9.0\ref\TesteFuncoes.dll
