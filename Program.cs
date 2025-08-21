@@ -4,13 +4,13 @@
     {
         public static void Main()
         {
-            DiaPagamento diaPagamento = new();
-            Cliente[] clientes = [
-                new Cliente(
+            PaymentDay paymentDay = new();
+            Client[] clientes = [
+                new Client(
                     "tiago", 5
                 )
             ];
-            var c = diaPagamento.ClientesAPagar(clientes);
+            var c = paymentDay.ClientsToPay(clientes);
             PrintClientes(c);
 
             // int mes = DateTime.Now.Month;
@@ -20,11 +20,11 @@
             // Console.WriteLine(a);
         }
 
-        public static void PrintClientes(List<Cliente> list)
+        public static void PrintClientes(List<Client> list)
         {
-            foreach (Cliente c in list)
+            foreach (Client c in list)
             {
-                Console.WriteLine(c.Nome + ": " + c.DiaPagamento);
+                Console.WriteLine(c.Name + ": " + c.PaymentDay);
             }
         }
     }
