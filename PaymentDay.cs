@@ -20,15 +20,15 @@ namespace src
         public int DueDateToPay()
         {
             int[] dueDays = [5, 10, 15, 20, 25, 30];
+            DateTimeNow dateTimeNow = new(DateTime.Now);
+            DateTime now = dateTimeNow.GetDateTime();
+
+            int currentMonth = now.Month;
+            int currentYear = now.Year;
+            int today = now.Day;
+
             foreach (int dueDay in dueDays)
             {
-                DateTimeNow dateTimeNow = new(DateTime.Now);
-                DateTime now = dateTimeNow.GetDateTime();
-
-                int currentMonth = now.Month;
-                int currentYear = now.Year;
-                int today = now.Day;
-
                 if (dueDay > today)
                 {
                     currentMonth -= 1;
@@ -38,20 +38,17 @@ namespace src
                         currentYear -= 1;
                     }
                 }
-                int daysInCurrentMonth = DateTime.DaysInMonth(currentYear, currentMonth);
-                DateTime dueDate = new(currentYear, currentMonth, Math.Min(dueDay, daysInCurrentMonth));
+                int daysInMonth = DateTime.DaysInMonth(currentYear, currentMonth);
+                int effectiveDay = Math.Min(dueDay, daysInMonth);
 
+                DateTime dueDate = new(currentYear, currentMonth, effectiveDay);
 
-                if (AddBusinessDays(dueDate, 3) == DateTime.Now)
+                if (AddBusinessDays(dueDate, 3).Date == now.Date)
                 {
-                    if (dueDate.Date.Day < 28)
-                    {
-                        return dueDate.Day;
-                    }
-                    dueDate = new(currentYear, currentMonth, dueDay);
-                    return dueDate.Day;
+                    return dueDay;
                 }
             }
+
             return 0;
         }
         public DateTime AddBusinessDays(DateTime date, int businessDaysToAdd)
